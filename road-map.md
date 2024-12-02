@@ -24,6 +24,7 @@
    - Directory traversal and file watchers.
    - Streams: `Readable`, `Writable`, `Transform`, `Duplex`.
    - Piping and buffering techniques for handling large files.
+   - Testing streams for performance and edge cases.
 
 5. **Buffer and Binary Data**
    - Working with `Buffer` for binary manipulation.
@@ -42,6 +43,10 @@
    - Building CLI tools with Node.js.
    - Creating interactive CLI tools using `readline` and `inquirer`.
    - Process lifecycle management (`exit`, `uncaughtException`).
+   - Leveraging Node.js as a child process for modular workflows.
+
+9. **Native Add-ons**
+   - Creating native C++ add-ons with `node-addon-api` for performance-critical applications.
 
 ---
 
@@ -51,6 +56,7 @@
    - Handling requests and responses.
    - Streaming data over HTTP.
    - SSL/TLS setup and security considerations.
+   - HTTP2: Setup and use cases (`http2` module).
 
 2. **Socket Programming**
    - Implementing WebSockets for real-time communication.
@@ -77,12 +83,19 @@
 6. **API Gateways**
    - Using tools like `Kong` or `Express Gateway` for managing APIs.
 
+7. **Load Testing**
+   - Testing APIs under heavy load with tools like `Artillery` or `k6`.
+
+8. **Rate Limiting and Throttling**
+   - Implementing rate-limiting mechanisms for protecting APIs.
+
 ---
 
 ## **III. Advanced Node.js Concepts**
 1. **Event Loop Internals**
    - Deep understanding of the event loop phases: timers, I/O callbacks, idle, poll, check, close callbacks.
    - Identifying blocking operations and mitigating them.
+   - Debugging the event loop using tools like `clinic.js`.
 
 2. **Performance Optimization**
    - Profiling and debugging memory leaks.
@@ -104,6 +117,9 @@
    - Building serverless applications with AWS Lambda, Google Cloud Functions, or Azure Functions.
    - Cold starts and strategies for mitigating latency in serverless functions.
    - Event-driven workflows with AWS EventBridge or Azure Event Grid.
+
+6. **Thread Pool Optimization**
+   - Customizing thread pool size (`UV_THREADPOOL_SIZE`) for optimized performance.
 
 ---
 
@@ -134,6 +150,10 @@
    - Preventing sensitive information leaks.
    - Using `npm audit` and dependency-checking tools like `Snyk`.
 
+6. **Advanced Security**
+   - Encrypting sensitive data at rest and in transit.
+   - Setting up Content Security Policy (CSP) headers.
+
 ---
 
 ## **V. Databases and Data Handling**
@@ -159,117 +179,8 @@
 5. **Data Serialization**
    - Understanding and using `Avro`, `MessagePack`, and other serialization protocols.
 
----
+6. **Time-Series Databases**
+   - Exploring InfluxDB or TimescaleDB for time-series data.
 
-## **VI. Testing**
-1. **Unit Testing**
-   - Writing tests using `Mocha`, `Jest`, or `AVA`.
-   - Mocking/stubbing dependencies with Sinon.js.
-
-2. **Integration and End-to-End Testing**
-   - Testing APIs with Supertest.
-   - Automating E2E tests using tools like Cypress or Puppeteer.
-
-3. **Test Automation**
-   - Configuring CI pipelines for automated testing.
-
-4. **Code Coverage**
-   - Ensuring comprehensive test coverage with tools like Istanbul (or nyc).
-
----
-
-## **VII. DevOps and Deployment**
-1. **Containerization**
-   - Dockerizing Node.js applications.
-   - Writing multi-stage Dockerfiles for production.
-
-2. **Orchestration**
-   - Managing containers with Kubernetes.
-   - Service discovery and load balancing.
-
-3. **Continuous Integration/Continuous Deployment**
-   - Setting up CI/CD pipelines with Jenkins, GitHub Actions, or GitLab CI.
-
-4. **Cloud Services**
-   - Deploying on AWS, GCP, or Azure.
-   - Using Elastic Beanstalk, App Engine, or Azure App Services.
-
-5. **Server Monitoring**
-   - Integrating application monitoring tools like ELK Stack (Elasticsearch, Logstash, Kibana).
-
-6. **Infrastructure as Code**
-   - Automating deployments with Terraform or AWS CloudFormation.
-
----
-
-## **VIII. Build Tools and Libraries**
-1. **Bundlers**
-   - Using Webpack, Rollup, or Parcel.
-   - Tree-shaking and code splitting.
-
-2. **Task Runners**
-   - Automating tasks with Gulp or npm scripts.
-
-3. **Package Management**
-   - Working with npm, pnpm, and Yarn.
-   - Managing dependencies and versioning effectively.
-
----
-
-## **IX. Ecosystem and Frameworks**
-1. **Express.js**
-   - Middleware creation and usage.
-   - Error handling.
-
-2. **NestJS**
-   - Building modular and scalable applications.
-   - Dependency injection and decorators.
-
-3. **Fastify**
-   - High-performance API design.
-   - Schema-based validation.
-
-4. **Other Frameworks**
-   - Adonis.js, Koa.js, Hapi.js.
-
-5. **SSR Frameworks**
-   - Using frameworks like Next.js with a Node.js backend for server-side rendering.
-
----
-
-## **X. Real-Time Applications**
-1. **Socket.IO**
-   - Handling events and acknowledgments.
-   - Scaling with Redis adapter.
-
-2. **Event-Driven Architecture**
-   - Using EventEmitters for decoupled communication.
-   - Designing distributed real-time systems using WebSockets or gRPC.
-
----
-
-## **XI. Observability**
-1. **Tracing**
-   - Using distributed tracing tools like OpenTelemetry.
-   
-2. **Error Tracking**
-   - Integrating tools like Sentry for error monitoring.
-
-3. **Application Health**
-   - Implementing health check endpoints for readiness and liveness.
-
----
-
-## **XII. API Documentation**
-1. **Tools**
-   - Using Swagger (OpenAPI) or Postman to document and test APIs.
-
----
-
-## **XIII. Soft Skills**
-1. **Team Collaboration**
-   - Using Git effectively for collaboration.
-   - Writing clean and maintainable code.
-
-2. **Code Reviews**
-   - Best practices for reviewing and improving code quality.
+7. **Advanced Transactions**
+   - Handling distributed transactions with multi-document ACID operations.
